@@ -12,5 +12,5 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
         """return multiple by one number"""
 
         return value * multiplier
-    
+
     return multiplier_function
