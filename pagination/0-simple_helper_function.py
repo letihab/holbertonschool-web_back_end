@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-function that takes two integer arguments and return 
+function that takes two integer arguments and return
 a tuple size two containing a star index and end index
 """
 
