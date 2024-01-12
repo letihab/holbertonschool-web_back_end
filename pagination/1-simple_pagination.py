@@ -31,10 +31,15 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-            """return the appropriate page of the dataset correct list row"""
+            """return the appropriate page of the dataset as a list of rows"""
             assert isinstance(page, int) and page > 0
             assert isinstance(page_size, int) and page_size > 0
 
             start, end = index_range(page, page_size)
+            dataset = self.dataset()
 
-            return self.dataset()[start:end]
+            if start >= len(dataset):
+                return []
+
+            return dataset[start:end]
+
