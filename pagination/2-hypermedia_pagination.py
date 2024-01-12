@@ -44,7 +44,7 @@ class Server:
             return dataset[start:end]
 
     def get_hyper(self, page: int = 1, page_size:
-                  int = 10) -> dict[int, List[List]]:
+                  int = 10) -> dict:
         """
         return dictionary containing the pair key value
         """
