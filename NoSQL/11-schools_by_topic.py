@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Write a Python function that changes all topics of a school
-document based on the name"""
+"""Write a Python function that returns the list of
+school having a specific topic:"""
 
 
-def update_topics(mongo_collection, name, topics):
+def schools_by_topic(mongo_collection, topic):
 	"""changes all topics of a school document"""
 
-	mongo_collection.update_many({'name': name}, {'$set': {'topics': topics}})
+	return mongo_collection.find({'topics': topic})
