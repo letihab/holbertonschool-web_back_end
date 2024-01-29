@@ -7,5 +7,4 @@ export default function getListStudentIds(studentsArray) {
 
   const studentIds = studentsArray.map((student) => student.id);
   return studentIds;
-
 }
