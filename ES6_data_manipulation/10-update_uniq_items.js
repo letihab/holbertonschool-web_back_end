@@ -1,12 +1,11 @@
-// return and updated map with initinial quantity 1
-
-export default function updateUniqueItems(map) {
-  if (!(map instanceof Map)) {
-    throw new Error('cannot process');
+export default function updateUniqueItems(mapObj) {
+  if (!(mapObj instanceof Map)) {
+    throw new Error('Cannot process');
   }
-  map.forEach((quantity, item) => {
-    if (quantity === 1) {
-      map.set(item, 100);
+  mapObj.forEach((value, key) => {
+    if (value === 1) {
+      mapObj.set(key, 100);
     }
   });
+  return mapObj;
 }
